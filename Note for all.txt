@@ -16,5 +16,38 @@ create a project
 django-admin startproject project_name
 
 create app inside project
-python manage.py startapp app_name 
- 
+python manage.py startapp app_name
+
+Open the project in editor make the following changes in settings
+add the app_name in the INSTALLED_APPS section
+edit database to point to MYSQL
+        'ENGINE': 'django.db.backends.MYSQL',
+        'NAME': 'AppDB',
+        'USER' : 'root',
+        'PASSWORD' : '123qwe,./',
+	'HOST' : 'localhost',
+ 	'PORT' : '3306',
+
+Setup the DataBase
+create file on the project e.g touch AppDB.pyout
+> import mysql.connector - Import the connector
+>dataBase = mysql.connector.connect(
+	host = 'localhost',
+	user = 'root',
+	passwd = '123qwe,./',
+) - a variable for db connection
+>cursorObject = dataBase.cursor() - to prepare a cursor object
+			What is cursor object in MySQL?
+			The MySQLCursor class instantiates objects that can 			execute operations such as SQL statements. Cursor 			objects interact with the MySQL server using a 				MySQLConnection object. To create a cursor, use the 			cursor() method of a connection object: import 				mysql. connector cnx = mysql. connector.
+>cursorObject.execute("CREATE TABLE tableau") - to create a database
+
+>print("All done") - to confirm code run
+
+> python AppDB.py - to run database
+
+>python manage.py migrate - to move db from django to other dbms (mysql)
+
+>winpty python manage.py createsuperuser - to create a user for the login
+
+>python manage.py runserver - run server
+localhost:8000
