@@ -38,7 +38,12 @@ create file on the project e.g touch AppDB.pyout
 ) - a variable for db connection
 >cursorObject = dataBase.cursor() - to prepare a cursor object
 			What is cursor object in MySQL?
-			The MySQLCursor class instantiates objects that can 			execute operations such as SQL statements. Cursor 			objects interact with the MySQL server using a 				MySQLConnection object. To create a cursor, use the 			cursor() method of a connection object: import 				mysql. connector cnx = mysql. connector.
+			The MySQLCursor class instantiates objects that can
+			execute operations such as SQL statements. Cursor
+			objects interact with the MySQL server using a
+			MySQLConnection object. To create a cursor, use the
+			cursor() method of a connection object: import
+			mysql. connector cnx = mysql. connector.
 >cursorObject.execute("CREATE TABLE tableau") - to create a database
 
 >print("All done") - to confirm code run
@@ -51,3 +56,20 @@ create file on the project e.g touch AppDB.pyout
 
 >python manage.py runserver - run server
 localhost:8000
+
+
+#Configure your local Git installation to use your GitHub credentials by entering the following
+git config --global user.name "github_username"
+git config --global user.email "email_address"
+git config --global push.default matching
+git config --global  alias.co checkout
+git init
+git add .
+git commit -am "name_commit"
+Create a repository on Github
+git remote add origin "repo link"
+git branch -M main - change master to main
+git push -u origin main
+
+the database file can be deleted
+
